@@ -9,7 +9,7 @@ int[,] array = new int[rows,columns];
 
 FillArray(array);
 PrintArray(array);
-Console.WriteLine($"Сумма элементов главной диагонали равна: {SumMainLine(array)}");
+SumMainLine(array);
 
 
 void FillArray(int[,] currentArray)
@@ -35,7 +35,7 @@ void PrintArray(int[,] currentArray)
     }
 }
 
-int SumMainLine(int[,] currentArray)
+void SumMainLine(int[,] currentArray)
 {
     int sum = 0;
     for (int i = 0; i < currentArray.GetLength(0); i++)
@@ -45,8 +45,12 @@ int SumMainLine(int[,] currentArray)
             if (i == j)
             {
                 sum = sum + currentArray[i, j];
+                Console.Write(currentArray[i, j] + " + ");
             }
         }
     }
-    return sum;
+    Console.Write("\b\b\b");
+    Console.Write(" = " + sum);
+    Console.WriteLine();
+    Console.Write("Сумма элементов главной диагонали: " + sum);
 }
