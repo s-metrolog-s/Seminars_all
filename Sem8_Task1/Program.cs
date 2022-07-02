@@ -3,8 +3,8 @@
 // местами первую и последнюю строку массива.
 
 Random rand = new Random();
-int m = rand.Next(2, 5);
-int n = rand.Next(2, 5);
+int m = rand.Next(2, 10);
+int n = rand.Next(2, 10);
 int[,] matrix = new int[m, n];
 
 Console.Clear();
